@@ -19,7 +19,7 @@ function Home() {
 	async function fetchBudgets() {
 		try {
 			const response = await
-				fetch('http://localhost:4000/budget', {
+				fetch('https://everythingatoneplace-backend9.onrender.com', {
 					headers: {
 						Authorization: token,
 					},
