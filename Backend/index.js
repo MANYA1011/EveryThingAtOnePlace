@@ -14,10 +14,10 @@ app.use(cors())
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb+srv://kharemanya10:1234@cluster0.sygzx.mongodb.net/DB',
-	{
+	/*{
 		useNewUrlParser: true,
 		useUnifiedTopology: true
-	});
+	}*/);
 
 app.use('/auth', authRoutes);
 app.use('/budget', budgetRoutes);
