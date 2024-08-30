@@ -114,7 +114,7 @@ function calculateAmounts(budget) {
 	const remaining = budget.totalAmount - available;
 	return { available, remaining, totalExpenses };
 }
-router.get('/', authMiddleware, async (req, res) => {
+router.get('/*', authMiddleware, async (req, res) => {
 	try {
 		const budgets = await Budget.find({ user: req.user._id });
 		const budgetsWithAmounts = budgets.map(budget => {
