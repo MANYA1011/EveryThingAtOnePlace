@@ -22,6 +22,10 @@ mongoose.connect('mongodb+srv://kharemanya10:1234@cluster0.sygzx.mongodb.net/DB'
 app.use('/auth', authRoutes);
 app.use('/budget', budgetRoutes);
 
+app.get("/messages", (req, res) => {
+	res.send("Hello");
+ });
+
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
 });
